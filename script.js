@@ -5,7 +5,7 @@ let runningTotal = null
 let operation = null
 const operators = ["+","-","/","*"]
 
-document.addEventListener('keydown', function (event) {55/
+document.addEventListener('keydown', function (event) {
     key = Number(event.key)
     if (Number.isInteger(key)) {
       numGetter(key)
