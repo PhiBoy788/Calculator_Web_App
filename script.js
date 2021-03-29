@@ -3,6 +3,24 @@ let calcNum1 = null
 let calcNum2 = null
 let runningTotal = null
 let operation = null
+const operators = ["+","-","/","*"]
+
+document.addEventListener('keydown', function (event) {55/
+    key = Number(event.key)
+    if (Number.isInteger(key)) {
+      numGetter(key)
+    }
+    if (operators.includes(event.key)){
+        numSaver(event.key)
+    }
+    if(event.key === "=" || event.key === "Enter"){
+        operate()
+    }
+    if(event.key === "c" || event.key === "C"){
+        clearAll()
+    }
+  });
+
 
 function clearAll(){
     displayValue = ""
@@ -128,7 +146,7 @@ function operate(){
         subtract(calcNum1,calcNum2)
     }else if (operation == "*"){
         multiply(calcNum1,calcNum2)
-    }else{
+    }else if (operation== "/") {
         divide(calcNum1,calcNum2)
     }
     runningTotal = document.getElementById("result").innerHTML
