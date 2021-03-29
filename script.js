@@ -7,7 +7,15 @@ function subtract (num1, num2) {
 	return num1 - num2
 }
 
-function sum (numList) {
+function multiply(num1, num2) {
+    return num1 * num2
+}
+
+function divide(num1, num2) {
+    return num1 / num2
+}
+
+function sumList(numList) {
 	total = 0
 	for (i = 0; i < numList.length; i++){
 		total += numList[i]
@@ -15,7 +23,7 @@ function sum (numList) {
 	return total
 }
 
-function multiply  (numList) {
+function multiplyList(numList) {
 	total = 0
 	for (i = 1; i < numList.length; i++) {
 		if (i == 1){
@@ -53,11 +61,6 @@ function factorial(num) {
 	
 }
 
-module.exports = {
-	add,
-	subtract,
-	sum,
-	multiply,
-    power,
-	factorial
+function(operator, num1, num2){
+    operator(num1,num2)
 }
